@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+	int x=0;
+	double sum=0;
+	int cnt=0;//数组序列号
+	int number[100];
+	scanf("%d",&x);
+	while(x!=-1){
+		number[cnt]=x;
+		sum+=x;
+		cnt++;
+		scanf("%d",&x);
+
+	}
+	printf("总数和是%.2lf\n",sum);//读入一堆数字放到数组
+	if(cnt>0){
+		int i;
+		double average=0.0;
+		average=sum/cnt;
+		printf("平均数是%.2lf\n",average);
+		for(i=0;i<cnt;i++){
+			if(number[i]>average){
+				printf("%d\t",number[i]);		
+			}
+		}
+
+	}//数的平均值和大于平均值的数字
+
+	
+	return 0;
+}
